@@ -835,6 +835,10 @@
   padding-top: 60px;
 }
 
+.parent {
+  width: 100%;
+}
+
 @media screen and (min-width: 1280px) {
   .nav-menu {
     margin-right: 0px;
@@ -1124,6 +1128,7 @@
 
 @media screen and (max-width: 479px) {
   .navbar {
+    width: 100%;
     padding-right: 16px;
     padding-left: 16px;
   }
@@ -1420,6 +1425,10 @@
     align-items: center;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+  }
+
+  .parent {
+    overflow: hidden;
   }
 }
 
