@@ -1,0 +1,616 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: Sign Up, key: -204ff822'
+            label: Text
+            name: '-204ff822'
+            widget: string
+          - hint: 'Original text: Join community, key: 8011093'
+            label: Text
+            name: '8011093'
+            widget: string
+          - hint: 'Original text: GO, key: 8e8'
+            label: Text
+            name: '8e8'
+            widget: string
+          - hint: 'Original text: Enjoy , key: 7bfe5b15'
+            label: Text
+            name: 7bfe5b15
+            widget: string
+          - hint: 'Original text: real life, key: -383267c2'
+            label: Text
+            name: '-383267c2'
+            widget: string
+          - hint: 'Original text: brand benefits, key: -147084cb'
+            label: Text
+            name: '-147084cb'
+            widget: string
+          - hint: 'Original text: with your , key: 2b3dee73'
+            label: Text
+            name: 2b3dee73
+            widget: string
+          - hint: 'Original text: NFTs, key: 248657'
+            label: Text
+            name: '248657'
+            widget: string
+          - hint: 'Original text: for, key: 18cc9'
+            label: Text
+            name: 18cc9
+            widget: string
+          - hint: 'Original text:  NFT Users, key: -4b5ba1bc'
+            label: Text
+            name: '-4b5ba1bc'
+            widget: string
+          - hint: 'Original text: Unlock the real value of your NFTs, key: -343f823f'
+            label: Text
+            name: '-343f823f'
+            widget: string
+          - hint: >-
+              Original text: Easy-to-use NFT IRL utility discovery. Your NFT is
+              more valuable than you think!, key: -670f4c8a
+            label: Text
+            name: '-670f4c8a'
+            widget: string
+          - hint: >-
+              Original text: Manage your perks at a one-stop platform, key:
+              -1555fd95
+            label: Text
+            name: '-1555fd95'
+            widget: string
+          - hint: >-
+              Original text: A hassle-free platform for NFT users to redeem and
+              manage rewards. No grinding anymore!, key: 6d90a71e
+            label: Text
+            name: 6d90a71e
+            widget: string
+          - hint: >-
+              Original text: Enjoy community-driven shopping and entertaining
+              experience, key: 418c2ab4
+            label: Text
+            name: 418c2ab4
+            widget: string
+          - hint: >-
+              Original text: Enjoy a new way to shop. Feel inclusive and
+              empowered! , key: -46b02c34
+            label: Text
+            name: '-46b02c34'
+            widget: string
+          - hint: 'Original text: For the latest news , key: 7ea3f3ba'
+            label: Text
+            name: 7ea3f3ba
+            widget: string
+          - hint: 'Original text: SIGN UP, key: -58bc8822'
+            label: Text
+            name: '-58bc8822'
+            widget: string
+          - hint: 'Original text:  Brands, key: 13db7a0c'
+            label: Text
+            name: 13db7a0c
+            widget: string
+          - hint: >-
+              Original text: Connect with next-generation consumers leveraging
+              NFTs, key: -7e5bcd10
+            label: Text
+            name: '-7e5bcd10'
+            widget: string
+          - hint: >-
+              Original text: Brands can now instantly reach and connect with NFT
+              native users by creating campaignsusing the Mintology platform
+              tools., key: -34bdf73f
+            label: Text
+            name: '-34bdf73f'
+            widget: text
+          - hint: 'Original text: Activate brand NFT strategy seamlessly, key: 2d42c7'
+            label: Text
+            name: 2d42c7
+            widget: string
+          - hint: >-
+              Original text: Brands can launch their own NFTs/ exclusive deals
+              to further engage with their target audience., key: e5d72b1
+            label: Text
+            name: e5d72b1
+            widget: text
+          - hint: >-
+              Original text: Accelate business through data-driven insights and
+              CRM integration, key: -73b6203e
+            label: Text
+            name: '-73b6203e'
+            widget: string
+          - hint: >-
+              Original text: Merchant dashboard and platform data to unlock more
+              business opportunities and efficiency. , key: 5c90a4d5
+            label: Text
+            name: 5c90a4d5
+            widget: text
+          - hint: "Original text: Web2 brands are lacking of tool and \_platform to create meaningful campaigns and engage with web3 users in a scalable way. Web3 NFT users are lacking of IRL (in-real-life) utilities for their NFT assets.Mintology is here to resolve these problems. ., key: 7e090c69"
+            label: Text
+            name: 7e090c69
+            widget: text
+          - hint: 'Original text: Cindy Jin, key: -2a70ac74'
+            label: Text
+            name: '-2a70ac74'
+            widget: string
+          - hint: 'Original text: Co-founder, key: 53436b6e'
+            label: Text
+            name: 53436b6e
+            widget: string
+          - hint: 'Original text: Business inquiry, key: 58456987'
+            label: Text
+            name: '58456987'
+            widget: string
+          - hint: >-
+              Original text: We are looking for brands and businesses to join
+              this exciting journey. Give us a shout if you are interested!,
+              key: -60d56e5c
+            label: Text
+            name: '-60d56e5c'
+            widget: text
+          - hint: 'Original text: Name, key: 24eeab'
+            label: Text
+            name: 24eeab
+            widget: string
+          - hint: 'Original text: Email Address, key: -2b7010d0'
+            label: Text
+            name: '-2b7010d0'
+            widget: string
+          - hint: >-
+              Original text: Tell us more about your brand/business. (optional)
+              , key: -36c081fd
+            label: Text
+            name: '-36c081fd'
+            widget: string
+          - hint: >-
+              Original text: Thank you for submission! The team will be in touch
+              soon, key: 6802628d
+            label: Text
+            name: 6802628d
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
+            widget: string
+          - hint: 'Original text: Bridging Brands with NFT Users, key: 105e9c4'
+            label: Text
+            name: 105e9c4
+            widget: string
+          - hint: >-
+              Original text: © 2022 Mintology. All Rights Reserved, key:
+              7d093d09
+            label: Text
+            name: 7d093d09
+            widget: string
+          - hint: 'Original text: Quicklink, key: -3afac8b9'
+            label: Text
+            name: '-3afac8b9'
+            widget: string
+          - hint: 'Original text: Request a demo, key: 36ab1513'
+            label: Text
+            name: 36ab1513
+            widget: string
+          - hint: 'Original text: Contact Us, key: 7f2746de'
+            label: Text
+            name: 7f2746de
+            widget: string
+          - hint: 'Original text: Follow Us, key: -5ae80293'
+            label: Text
+            name: '-5ae80293'
+            widget: string
+          - hint: >-
+              Original text: Sign up to receive emails on launching news, events
+              and more., key: -30a251c7
+            label: Text
+            name: '-30a251c7'
+            widget: string
+          - hint: 'Original text: You''re on the list! 🎉, key: 1ea8255'
+            label: Text
+            name: 1ea8255
+            widget: string
+          - hint: >-
+              Original text: Keep an eye on your inbox for updates., key:
+              3245f728
+            label: Text
+            name: 3245f728
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: https://www.mintology.studio/, key: -6e5c6d59'
+            label: Link
+            name: '-6e5c6d59'
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: https://twitter.com/MintologyStudio, key: 93a0320'
+            label: Link
+            name: 93a0320
+            widget: string
+          - hint: 'Original link: mailto:hello@mintology.studio, key: -3f338a88'
+            label: Link
+            name: '-3f338a88'
+            widget: string
+          - hint: >-
+              Original link: https://www.linkedin.com/company/mintology-studio/,
+              key: 49cf6504
+            label: Link
+            name: 49cf6504
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: '-4a542fd7'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2a485a80'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-5e7ddccb'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-defd83b'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 464f7e70
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6f7129d0
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7081f540'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7276f94f'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-22b92970'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7132dcb8'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2a484e45'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7124c537'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7116adb6'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-71089635'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-30789fec'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
