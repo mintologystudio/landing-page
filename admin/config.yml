@@ -200,6 +200,28 @@ collections:
             label: Text
             name: '248657'
             widget: string
+          - hint: 'Original text: How does it work?, key: -2b3cde10'
+            label: Text
+            name: '-2b3cde10'
+            widget: string
+          - hint: >-
+              Original text: Simply browse the branded rewards/deals., key:
+              -2b5afe09
+            label: Text
+            name: '-2b5afe09'
+            widget: string
+          - hint: >-
+              Original text: Log in and connect your wallet containing NFTs.,
+              key: -67d06d43
+            label: Text
+            name: '-67d06d43'
+            widget: string
+          - hint: >-
+              Original text: Redeem the rewards/ deals offered to your NFTs.,
+              key: -492718d1
+            label: Text
+            name: '-492718d1'
+            widget: string
           - hint: 'Original text: for, key: 18cc9'
             label: Text
             name: 18cc9
@@ -262,10 +284,10 @@ collections:
             widget: string
           - hint: >-
               Original text: Brands can now instantly reach and connect with NFT
-              native users by creating campaignsusing the Mintology platform
-              tools., key: -34bdf73f
+              native users by creating campaigns using the Mintology platform
+              tools., key: -6b884433
             label: Text
-            name: '-34bdf73f'
+            name: '-6b884433'
             widget: text
           - hint: 'Original text: Activate brand NFT strategy seamlessly, key: 2d42c7'
             label: Text
@@ -278,10 +300,10 @@ collections:
             name: e5d72b1
             widget: text
           - hint: >-
-              Original text: Accelate business through data-driven insights and
-              CRM integration, key: -73b6203e
+              Original text: Accelerate business through data-driven insights
+              and CRM integration, key: -1f476bcb
             label: Text
-            name: '-73b6203e'
+            name: '-1f476bcb'
             widget: string
           - hint: >-
               Original text: Merchant dashboard and platform data to unlock more
@@ -326,11 +348,13 @@ collections:
             label: Text
             name: '-36c081fd'
             widget: string
-          - hint: >-
-              Original text: Thank you for submission! The team will be in touch
-              soon, key: 6802628d
+          - hint: 'Original text: Thank you :), key: 251fdce6'
             label: Text
-            name: 6802628d
+            name: 251fdce6
+            widget: string
+          - hint: 'Original text: We will get in touch with you soon., key: 65219c2e'
+            label: Text
+            name: 65219c2e
             widget: string
           - hint: >-
               Original text: Oops! Something went wrong while submitting the
@@ -338,9 +362,11 @@ collections:
             label: Text
             name: '-7c112e99'
             widget: string
-          - hint: 'Original text: Bridging Brands with NFT Users, key: 105e9c4'
+          - hint: >-
+              Original text: Enjoy real life brand benefits with your NFTs.,
+              key: 9435d70
             label: Text
-            name: 105e9c4
+            name: 9435d70
             widget: string
           - hint: >-
               Original text: © 2022 Mintology. All Rights Reserved, key:
@@ -351,14 +377,6 @@ collections:
           - hint: 'Original text: Quicklink, key: -3afac8b9'
             label: Text
             name: '-3afac8b9'
-            widget: string
-          - hint: 'Original text: Request a demo, key: 36ab1513'
-            label: Text
-            name: 36ab1513
-            widget: string
-          - hint: 'Original text: Contact Us, key: 7f2746de'
-            label: Text
-            name: 7f2746de
             widget: string
           - hint: 'Original text: Follow Us, key: -5ae80293'
             label: Text
@@ -459,6 +477,45 @@ collections:
                 required: false
           - label: Image
             name: '-defd83b'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 7928115f
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 7919f9de
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 790be25d
             widget: object
             fields:
               - name: url
