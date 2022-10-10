@@ -168,17 +168,25 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: 'Original text: Sign Up, key: -204ff822'
+          - hint: 'Original text: Why Mintology, key: -2ce79b16'
             label: Text
-            name: '-204ff822'
+            name: '-2ce79b16'
             widget: string
-          - hint: 'Original text: Join community, key: 8011093'
+          - hint: 'Original text: How it works, key: -5f2415c3'
             label: Text
-            name: '8011093'
+            name: '-5f2415c3'
             widget: string
-          - hint: 'Original text: GO, key: 8e8'
+          - hint: "Original text: For NFT\_users, key: 6c85b34d"
             label: Text
-            name: '8e8'
+            name: 6c85b34d
+            widget: string
+          - hint: 'Original text: For Brands, key: 6be28543'
+            label: Text
+            name: 6be28543
+            widget: string
+          - hint: 'Original text: Partnerships, key: 1486a20f'
+            label: Text
+            name: 1486a20f
             widget: string
           - hint: 'Original text: Enjoy , key: 7bfe5b15'
             label: Text
@@ -199,6 +207,18 @@ collections:
           - hint: 'Original text: NFTs, key: 248657'
             label: Text
             name: '248657'
+            widget: string
+          - hint: >-
+              Original text: 🎉 You're on the list! Keep an eye on your inbox.,
+              key: -5850862a
+            label: Text
+            name: '-5850862a'
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
             widget: string
           - hint: 'Original text: How does it work?, key: -2b3cde10'
             label: Text
@@ -263,14 +283,6 @@ collections:
               empowered! , key: -46b02c34
             label: Text
             name: '-46b02c34'
-            widget: string
-          - hint: 'Original text: For the latest news , key: 7ea3f3ba'
-            label: Text
-            name: 7ea3f3ba
-            widget: string
-          - hint: 'Original text: SIGN UP, key: -58bc8822'
-            label: Text
-            name: '-58bc8822'
             widget: string
           - hint: 'Original text:  Brands, key: 13db7a0c'
             label: Text
@@ -356,31 +368,19 @@ collections:
             label: Text
             name: 65219c2e
             widget: string
-          - hint: >-
-              Original text: Oops! Something went wrong while submitting the
-              form., key: -7c112e99
+          - hint: 'Original text: Request a demo, key: 36ab1513'
             label: Text
-            name: '-7c112e99'
+            name: 36ab1513
+            widget: string
+          - hint: 'Original text: Contact Us, key: 7f2746de'
+            label: Text
+            name: 7f2746de
             widget: string
           - hint: >-
-              Original text: Enjoy real life brand benefits with your NFTs.,
-              key: 9435d70
+              Original text: © 2022 Mintology. All rights reserved, key:
+              -4b63def7
             label: Text
-            name: 9435d70
-            widget: string
-          - hint: >-
-              Original text: © 2022 Mintology. All Rights Reserved, key:
-              7d093d09
-            label: Text
-            name: 7d093d09
-            widget: string
-          - hint: 'Original text: Quicklink, key: -3afac8b9'
-            label: Text
-            name: '-3afac8b9'
-            widget: string
-          - hint: 'Original text: Follow Us, key: -5ae80293'
-            label: Text
-            name: '-5ae80293'
+            name: '-4b63def7'
             widget: string
           - hint: >-
               Original text: Sign up to receive emails on launching news, events
@@ -398,6 +398,20 @@ collections:
             label: Text
             name: 3245f728
             widget: string
+          - hint: 'Original text: Protected Page, key: -11d4bbff'
+            label: Text
+            name: '-11d4bbff'
+            widget: string
+          - hint: 'Original text: Password, key: 4c641ebb'
+            label: Text
+            name: 4c641ebb
+            widget: string
+          - hint: >-
+              Original text: Incorrect password. Please try again., key:
+              -f5c4b5f
+            label: Text
+            name: '-f5c4b5f'
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -410,17 +424,43 @@ collections:
             label: Link
             name: '-6e5c6d59'
             widget: string
-          - hint: 'Original link: #, key: 23'
+          - hint: 'Original link: #howitworks, key: -546c0cb6'
             label: Link
-            name: '23'
+            name: '-546c0cb6'
+            widget: string
+          - hint: 'Original link: #for-users, key: 65e82b41'
+            label: Link
+            name: 65e82b41
+            widget: string
+          - hint: 'Original link: #for-brands, key: 36a12fb3'
+            label: Link
+            name: 36a12fb3
+            widget: string
+          - hint: 'Original link: #partnership, key: 4770af01'
+            label: Link
+            name: 4770af01
             widget: string
           - hint: 'Original link: https://twitter.com/MintologyStudio, key: 93a0320'
             label: Link
             name: 93a0320
             widget: string
+          - hint: 'Original link: https://discord.gg/3Bz72KhEV7, key: 6dd03aa1'
+            label: Link
+            name: 6dd03aa1
+            widget: string
+          - hint: >-
+              Original link: https://medium.com/@mintology.studio, key:
+              -7d942e76
+            label: Link
+            name: '-7d942e76'
+            widget: string
           - hint: 'Original link: mailto:hello@mintology.studio, key: -3f338a88'
             label: Link
             name: '-3f338a88'
+            widget: string
+          - hint: 'Original link: https://discord.gg/48NFUtjPcc, key: 14338d5f'
+            label: Link
+            name: 14338d5f
             widget: string
           - hint: >-
               Original link: https://www.linkedin.com/company/mintology-studio/,
@@ -437,19 +477,6 @@ collections:
             widget: hidden
             default: Images
           - label: Image
-            name: '-4a542fd7'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
             name: '-2a485a80'
             widget: object
             fields:
@@ -463,7 +490,33 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-5e7ddccb'
+            name: 63d3600f
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-54d911b8'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 73d96805
             widget: object
             fields:
               - name: url
@@ -541,19 +594,6 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 6f7129d0
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
             name: '-7081f540'
             widget: object
             fields:
@@ -606,46 +646,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-2a484e45'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-7124c537'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-7116adb6'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-71089635'
+            name: '-137c0172'
             widget: object
             fields:
               - name: url
@@ -659,6 +660,19 @@ collections:
                 required: false
           - label: Image
             name: '-30789fec'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4abef31c
             widget: object
             fields:
               - name: url
